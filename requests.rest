@@ -1,0 +1,145 @@
+GET http://localhost:8080/categories
+
+###
+GET http://localhost:8080/categories/2
+
+###
+GET http://localhost:8080/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsInVzZXJuYW1lIjoiSmFtZXMiLCJlbWFpbCI6InRlc3RlciIsInBob25lIjoiMjI2Mzc0ODIiLCJwYXNzd29yZCI6IiQyYiQxMCRyMVVnakVHczJnVXBzZ0VidG1kbXMuLlN1MXZoRkc5M2IvdzVkNTJ4aEd2NnpyazRBWUVTQyIsImlhdCI6MTYwOTQyNDQzOCwiZXhwIjoxNjA5NDI2MjM4fQ.8SNacFC_DHP41KazdMpmniskE0Iixet_KHpIFvJb7mE
+###
+
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+    "username": "1111111",
+    "password": "1111111",
+    "email": "1111111",
+    "phone": 1111111,
+    "permission": "User"
+}
+
+###
+
+POST http://localhost:8080/users/login
+Content-Type: application/json
+
+{
+    "username": "111",
+    "password": "111"
+}
+
+###
+
+POST http://localhost:8080/users/token
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6IkphbWVzIiwiZW1haWwiOm51bGwsInBob25lIjpudWxsLCJwYXNzd29yZCI6IiQyYiQxMCRKdEpFejRUR0xLRGxBSEY3b3JUYzNPVkg4b2ZPV0tmSjJCMUkxYWZJMDVsUW54SElERC5uaSIsImlhdCI6MTYwOTI1MDczM30.TFLwZ53q-3U4rd2YAQysGgXguoBlUj_W_SsTIcyif88"
+}
+
+###
+
+POST http://localhost:8080/users/logout
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6IkphbWVzIiwiZW1haWwiOm51bGwsInBob25lIjpudWxsLCJwYXNzd29yZCI6IiQyYiQxMCRKdEpFejRUR0xLRGxBSEY3b3JUYzNPVkg4b2ZPV0tmSjJCMUkxYWZJMDVsUW54SElERC5uaSIsImlhdCI6MTYwOTI1MDczM30.TFLwZ53q-3U4rd2YAQysGgXguoBlUj_W_SsTIcyif88"
+}
+
+###
+
+GET http://localhost:8080/products
+
+###
+
+GET http://localhost:8080/products/page/1/5
+
+###
+GET http://localhost:8080/products/page/2
+
+###
+
+GET http://localhost:8080/status/1
+
+###
+
+GET http://localhost:8080/status
+
+###
+
+GET http://localhost:8080/orders
+Authorization: Bearer eyUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsInVzZXJuYW1lIjoiSmFtZXMiLCJlbWFpbCI6InRlc3RlciIsInBob25lIjoiMjI2Mzc0ODIiLCJwYXNzd29yZCI6IiQyYiQxMCRyMVVnakVHczJnVXBzZ0VidG1kbXMuLlN1MXZoRkc5M2IvdzVkNTJ4aEd2NnpyazRBWUVTQyIsImlhdCI6MTYwOTc1OTQwMiwiZXhwIjoxNjA5ODY3NDAyfQ.cjcYsO66TKY5unCz-nPV6R7UBnGwjFpPaHX_iTVOOaQJhbGciOiJI
+
+###
+
+GET http://localhost:8080/orders/6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsInVzZXJuYW1lIjoiSmFtZXMiLCJlbWFpbCI6InRlc3RlciIsInBob25lIjoiMjI2Mzc0ODIiLCJwYXNzd29yZCI6IiQyYiQxMCRyMVVnakVHczJnVXBzZ0VidG1kbXMuLlN1MXZoRkc5M2IvdzVkNTJ4aEd2NnpyazRBWUVTQyIsImlhdCI6MTYwOTc1OTQwMiwiZXhwIjoxNjA5ODY3NDAyfQ.cjcYsO66TKY5unCz-nPV6R7UBnGwjFpPaHX_iTVOOaQ
+
+###
+
+GET http://localhost:8080/orders/status/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsInVzZXJuYW1lIjoiSmFtZXMiLCJlbWFpbCI6InRlc3RlciIsInBob25lIjoiMjI2Mzc0ODIiLCJwYXNzd29yZCI6IiQyYiQxMCRyMVVnakVHczJnVXBzZ0VidG1kbXMuLlN1MXZoRkc5M2IvdzVkNTJ4aEd2NnpyazRBWUVTQyIsImlhdCI6MTYwOTc3NzQxMywiZXhwIjoxNjA5ODg1NDEzfQ.5vxLW_7Q2psW3M8OnBKarXqUyVEkzuFVgQEsuwwA-vQ
+
+###
+
+PUT http://localhost:8080/orders/80/status
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsInVzZXJuYW1lIjoiSmFtZXMiLCJlbWFpbCI6InRlc3RlciIsInBob25lIjoiMjI2Mzc0ODIiLCJwYXNzd29yZCI6IiQyYiQxMCRyMVVnakVHczJnVXBzZ0VidG1kbXMuLlN1MXZoRkc5M2IvdzVkNTJ4aEd2NnpyazRBWUVTQyIsImlhdCI6MTYwOTc1OTQwMiwiZXhwIjoxNjA5ODY3NDAyfQ.cjcYsO66TKY5unCz-nPV6R7UBnGwjFpPaHX_iTVOOaQ
+
+{
+    "orderstate": 4,
+    "total": 5
+}
+
+###
+POST http://localhost:8080/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjcsInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoiNDM2IiwicGhvbmUiOiI2NDMiLCJwYXNzd29yZCI6IiQyYiQxMCQvRUFPV2l2ZE5QL2NHaGt5NlJlV1l1bXoxclZXNHN4NnFFUWhTWHhuSVA3WGYzSzFCSE5YVyIsImlhdCI6MTYwOTc4NzU3NiwiZXhwIjoxNjA5ODk1NTc2fQ.8B0AWa7a98jYq54ESPc884hZxU4JIYKZIJHuMe-WMOI
+
+
+###
+
+GET http://localhost:8080/orderList/78
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjUsInVzZXJuYW1lIjoiMTExIiwiZW1haWwiOiIxMTEiLCJwaG9uZSI6IjExMSIsInBhc3N3b3JkIjoiJDJiJDEwJG45Ni5JVEtxdG5BLzB4NE5Gc2IyYmVCcVI0OEFLYUhBNWJRMnJyOVpPREtLY3JPcW5qVmVxIiwicGVybWlzc2lvbiI6IkFkbWluIiwiaWF0IjoxNjEwMTAwMTUzLCJleHAiOjE2MTAyMDgxNTN9.--OTKhdpui_XoZprviLVAWk5VOADFmu7jyo0LBXKts0
+
+###
+
+POST http://localhost:8080/orderList/76
+Content-Type: application/json
+Authorization: Bearer yJehciOibGJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsInVzZXJuYW1lIjoiSmFtZXMiLCJlbWFpbCI6InRlc3RlciIsInBob25lIjoiMjI2Mzc0ODIiLCJwYXNzd29yZCI6IiQyYiQxMCRyMVVnakVHczJnVXBzZ0VidG1kbXMuLlN1MXZoRkc5M2IvdzVkNTJ4aEd2NnpyazRBWUVTQyIsImlhdCI6MTYwOTc3NzQxMywiZXhwIjoxNjA5ODg1NDEzfQ.5vxLW_7Q2psW3M8OnBKarXqUyVEkzuFVgQEsuwwA-vQ
+
+{
+    "productId": 77,
+    "quantity": 0
+}
+
+###
+
+PUT http://localhost:8080/orderList/76
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjcsInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoiNDM2IiwicGhvbmUiOiI2NDMiLCJwYXNzd29yZCI6IiQyYiQxMCQvRUFPV2l2ZE5QL2NHaGt5NlJlV1l1bXoxclZXNHN4NnFFUWhTWHhuSVA3WGYzSzFCSE5YVyIsImlhdCI6MTYwOTc4ODMxMCwiZXhwIjoxNjA5ODk2MzEwfQ.qyzvHLCv3S5zmK1PMQGE32gphokVm5Ktub5GxSTHK34
+
+
+{
+    "quantity": -2,
+    "id": 121
+}
+
+###
+
+DELETE http://localhost:8080/orderList/6
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsInVzZXJuYW1lIjoiSmFtZXMiLCJlbWFpbCI6InRlc3RlciIsInBob25lIjoiMjI2Mzc0ODIiLCJwYXNzd29yZCI6IiQyYiQxMCRyMVVnakVHczJnVXBzZ0VidG1kbXMuLlN1MXZoRkc5M2IvdzVkNTJ4aEd2NnpyazRBWUVTQyIsImlhdCI6MTYwOTUzNzU4MCwiZXhwIjoxNjA5NjQ1NTgwfQ.l4aP8hUsSakUfES42J2X44lLqseJP_yk5n-r6DlBrs8
+
+{
+    "id": 30
+}
+
+###
+DELETE http://localhost:8080/orderList/9
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsInVzZXJuYW1lIjoiSmFtZXMiLCJlbWFpbCI6InRlc3RlciIsInBob25lIjoiMjI2Mzc0ODIiLCJwYXNzd29yZCI6IiQyYiQxMCRyMVVnakVHczJnVXBzZ0VidG1kbXMuLlN1MXZoRkc5M2IvdzVkNTJ4aEd2NnpyazRBWUVTQyIsImlhdCI6MTYwOTUzNzU4MCwiZXhwIjoxNjA5NjQ1NTgwfQ.l4aP8hUsSakUfES42J2X44lLqseJP_yk5n-r6DlBrs8
+
+{
+    "id": 29
+}
